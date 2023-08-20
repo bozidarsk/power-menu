@@ -8,25 +8,10 @@ public static class Program
 	private static readonly string SHELL = Environment.GetEnvironmentVariable("SHELL");
 	public static void Shell(string command) 
 	{
-		Console.WriteLine($"{SHELL} -c \"{command}\"");
-		// Process.Start(SHELL, $"-c \"{command}\"");
-
-		// ProcessStartInfo info = new ProcessStartInfo();
-		// info.FileName = SHELL;
-		// info.Arguments = $"-c \"{command}\"";
-		// info.UseShellExecute = false;
-		// info.RedirectStandardOutput = true;
-		// info.RedirectStandardError = false;
-
-		// Process proc = new Process();
-		// proc.StartInfo = info;
-		// proc.Start();
-		// proc.WaitForExit();
-
-		// return proc.StandardOutput.ReadToEnd();
+		Process.Start(SHELL, $"-c \"{command}\"");
+		Gtk.Application.Quit();
 	}
 
-	/// <TODO> fix commands in 'ProjectConfig.cs' and uncomment 'void Program.Shell(string command)' </TODO>
 	private static int Main(string[] args) 
 	{
 		if (args.Length == 0 || (args.Length == 1 && (args[0] == "-h" || args[0] == "--help" || args[0] == "help"))) 
