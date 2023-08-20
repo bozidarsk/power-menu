@@ -26,6 +26,7 @@ public static class Program
 		// return proc.StandardOutput.ReadToEnd();
 	}
 
+	/// <TODO> fix commands in 'ProjectConfig.cs' and uncomment 'void Program.Shell(string command)' </TODO>
 	private static int Main(string[] args) 
 	{
 		if (args.Length == 0 || (args.Length == 1 && (args[0] == "-h" || args[0] == "--help" || args[0] == "help"))) 
