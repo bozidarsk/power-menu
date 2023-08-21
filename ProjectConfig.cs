@@ -14,7 +14,7 @@ public static partial class Config
 	public static string RebootText { private set; get; } = "<span font-family=\"Font Awesome 6 Sharp\"></span>  Reboot";
 	public static string RebootCommand { private set; get; } = @"reboot";
 	public static string LockText { private set; get; } = "<span font-family=\"Font Awesome 6 Sharp\" font-size=\"small\"></span> Lock";
-	public static string LockCommand { private set; get; } = @"dm-tool lock";
+	public static string LockCommand { private set; get; } = @"";
 	public static string LogoutText { private set; get; } = "<span font-family=\"Font Awesome 6 Sharp\"></span> Logout";
 	public static string LogoutCommand { private set; get; } = @"loginctl kill-user $USER";
 	public static string SleepText { private set; get; } = "<span font-family=\"Font Awesome 6 Sharp\"></span> Sleep";
